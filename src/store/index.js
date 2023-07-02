@@ -14,13 +14,15 @@ const counterSlice = createSlice({
             state.counter --
         },
         increase(state, action) {
-            state.counter = state.counter + action.amount
+            state.counter = state.counter + action.payload
         },
         toggleCounter(state) {
             state.showCounter = !state.showCounter
         }
     }
 })
+
+export const counterActions = counterSlice.actions
 
 
 const store = configureStore({
